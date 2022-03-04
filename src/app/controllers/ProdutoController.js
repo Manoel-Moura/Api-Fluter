@@ -1,6 +1,6 @@
 import Produto from '../models/Produto';
 
-class ProdutoController {
+class produtoController {
   async store(req, res) {
     const { nome, ingredientes, preco, categoria, imagemurl } =  
     await Produto.create(
@@ -11,7 +11,7 @@ class ProdutoController {
 
   async get(req, res, next) {
     const produtos = await Produto.findAll();
-    res.json(produtos);
+    res.json({data:{produtos}});
   }
 
   async getId(req, res, next) {
@@ -105,4 +105,4 @@ class ProdutoController {
   }
 }
 
-export default new ProdutoController();
+export default new produtoController();

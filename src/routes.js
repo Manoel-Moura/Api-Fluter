@@ -22,5 +22,6 @@ routes.post("/login", cors() , SC.store);
 
 
 routes.post("/produto", cors(), PC.store);
+routes.get("/produtos", cors(), PC.get);
 
 export default routes;

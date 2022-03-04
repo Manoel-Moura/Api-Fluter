@@ -1,5 +1,7 @@
 'use strict';
 
+const { password } = require("../../config/database");
+
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('produtos', {
